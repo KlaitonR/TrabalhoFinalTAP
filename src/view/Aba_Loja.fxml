@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="925.0" style="-fx-background-color: silver; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Aba_Loja_Controller">
+   <children>
+      <BorderPane style="-fx-background-color: #5d8082;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox style="-fx-background-color: #14aeea; -fx-border-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Sua Loja!" textFill="#0a0a0a">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="273.0" prefWidth="148.0" style="-fx-border-color: black; -fx-background-color: #81a6b9;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#cadastroProduto" prefHeight="44.0" prefWidth="133.0" text="Cadastrar novo produto" textAlignment="CENTER" wrapText="true">
+                     <effect>
+                        <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="230.0" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="30.0" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/img_549530.png" />
+                           </image>
+                           <rotationAxis>
+                              <Point3D />
+                           </rotationAxis>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#excluiProduto" prefHeight="43.0" prefWidth="136.0" text="Remover produto" textAlignment="CENTER" wrapText="true">
+                     <effect>
+                        <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="230.0" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="34.0" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#carregaTabs" prefHeight="43.0" prefWidth="136.0" text="Atualizar tabelas" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <effect>
+                        <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="230.0" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/refresh-flat.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#excluiCompra" text="Remover da lista de vendidos" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <effect>
+                        <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="230.0" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="35.0" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/13.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <bottom>
+            <VBox prefHeight="221.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Lista de produtos cadastrados" textFill="#0a0a0a">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="tabCadastrados" prefHeight="184.0" prefWidth="868.0" style="-fx-border-color: black; -fx-background-color: #C0E5FF;">
+                    <columns>
+                        <TableColumn fx:id="colTipo" prefWidth="107.0" text="Tipo" />
+                      <TableColumn fx:id="colProduto" prefWidth="158.0" text="Produto" />
+                      <TableColumn fx:id="colMarca" prefWidth="138.0" text="Marca" />
+                        <TableColumn fx:id="colMaterial" prefWidth="123.0" text="Material" />
+                        <TableColumn fx:id="colCor" prefWidth="116.0" text="Cor" />
+                        <TableColumn fx:id="colSexo" prefWidth="56.0" text="Sexo" />
+                        <TableColumn fx:id="colTamanho" prefWidth="70.0" text="Tamanho" />
+                        <TableColumn fx:id="colValor" prefWidth="68.0" text="Valor" />
+                        <TableColumn fx:id="colQuantia" prefWidth="75.0" text="Estoque" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="763.0" style="-fx-background-color: #14aeea; -fx-border-color: BLACK;" text="Lista de produtos vendidos" textFill="#111010">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <TableView fx:id="tabVendas" prefHeight="215.0" prefWidth="575.0" style="-fx-background-color: #C0E5FF; -fx-border-color: black;">
+                    <columns>
+                      <TableColumn fx:id="colProd" prefWidth="119.0" text="Produto" />
+                      <TableColumn fx:id="colCliente" prefWidth="138.0" text="Cliente" />
+                        <TableColumn fx:id="colQt" prefWidth="114.0" text="Unidades vendidas" />
+                        <TableColumn fx:id="colVal" prefWidth="121.0" text="Valor da compra" />
+                        <TableColumn fx:id="colCod" prefWidth="139.0" text="Código da venda" />
+                        <TableColumn fx:id="colStatus" prefWidth="117.0" text="Status" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="82.0" prefWidth="116.0">
+                           <children>
+                              <Label prefHeight="59.0" prefWidth="194.0" text="Insira um valor:" textFill="#141414">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtAtualizaEstoque" prefHeight="25.0" prefWidth="0.0" promptText="Insira um valor" style="-fx-border-color: black;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children></VBox>
+                        <Button mnemonicParsing="false" onAction="#atualizarEstoque" prefHeight="43.0" prefWidth="134.0" text="Atualizar estoque" textAlignment="CENTER" wrapText="true">
+                           <effect>
+                              <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="230.0" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="35.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/update-left-rotation.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <VBox>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#imprimirRelatorio" text="Salvar relatório">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <effect>
+                                    <Lighting diffuseConstant="1.7" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="234.0" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" preserveRatio="true">
+                                       <image>
+                                          <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/kisspng-computer-icons-software-testing-icon-design-checkup-icon-5b55c5cdc83337.45988761153234785382.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="220.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

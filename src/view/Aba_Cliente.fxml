@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="536.0" prefWidth="875.0" style="-fx-background-color: #c3e9b4; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Aba_Cliente_Controller">
+   <children>
+      <BorderPane style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="499.0" prefWidth="143.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-background-color: #2f2f2f; -fx-background-radius: 5;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="327.0" prefWidth="141.0">
+                     <children>
+                        <HBox style="-fx-background-color: #b6ff34; -fx-border-radius: 10; -fx-background-radius: 5;">
+                           <children>
+                              <Label text="Sua Conta" textFill="#1b1b1b">
+                                 <font>
+                                    <Font name="Rockwell Extra Bold" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="38.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/Conta.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox onKeyReleased="#filtrarLojas">
+                           <children>
+                              <Label style="-fx-background-color: #b6ff34;" text="Procure por uma loja: " textAlignment="CENTER" textFill="#070707" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="12.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtPesquisa" onKeyReleased="#filtrarLojas" prefHeight="25.0" prefWidth="109.0" promptText="Pesquisar" style="-fx-border-color: black;">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label style="-fx-background-color: #b6ff34;" text="Procurar produto: " textFill="#111111" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="12.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtPesquisaProduto" onKeyReleased="#filtrarProdutos" prefHeight="25.0" prefWidth="109.0" promptText="Pesquisar" style="-fx-border-color: black;">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#vizualizarProduto" prefHeight="42.0" prefWidth="145.0" text="Vizualização do produto" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="3.0" />
+                     </VBox.margin>
+                     <effect>
+                        <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="230.0" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="45.0" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/Camera%20Logo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <VBox style="-fx-border-color: black;">
+                     <children>
+                        <ImageView fx:id="imagem" fitHeight="150.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#abaPagamento" text="Finalizar pagamentos de pedidos" textAlignment="CENTER" wrapText="true">
+                           <effect>
+                              <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="230.0" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="15.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="46.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/exchange.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <VBox style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="42.0" prefWidth="585.0" style="-fx-background-color: #7cff00;">
+                     <children>
+                        <Label style="-fx-background-color: #7cff00;" text="Lista de lojas cadastradas no aplicativo" textFill="#0a0a0a">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="6.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox prefHeight="457.0" prefWidth="597.0" style="-fx-background-color: #000000;">
+                     <children>
+                        <HBox prefHeight="166.0" prefWidth="707.0" style="-fx-background-color: #000000;">
+                           <children>
+                              <TableView fx:id="tabLojas" prefHeight="186.0" prefWidth="490.0" style="-fx-border-color: gray;">
+                                <columns>
+                                  <TableColumn fx:id="colLoja" prefWidth="126.0" text="Loja" />
+                                    <TableColumn fx:id="colCidade" prefWidth="143.0" text="Cidade" />
+                                    <TableColumn fx:id="colTelefone" prefWidth="122.0" text="Telefone" />
+                                    <TableColumn fx:id="colCodigo" prefWidth="97.0" text="Código" />
+                                </columns>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#listarTodosOsProdutos" prefHeight="25.0" prefWidth="152.0" text="Listar todos os produtos">
+                                 <effect>
+                                    <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="230.0" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#listarProdutosLojaSelecionada" prefHeight="25.0" prefWidth="210.0" text="Listar produtos da loja selecionada">
+                                 <effect>
+                                    <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="230.0" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets left="22.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label style="-fx-background-color: #b6ff34;" text="Lista de Produtos da loja selecionada" textFill="#070707">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tabProdutos" prefHeight="184.0" prefWidth="865.0" style="-fx-border-color: gray;">
+                          <columns>
+                              <TableColumn fx:id="colTipo" prefWidth="75.0" text="Tipo" />
+                            <TableColumn fx:id="colNome" prefWidth="110.0" text="Nome" />
+                            <TableColumn fx:id="colMarca" prefWidth="79.0" text="Marca" />
+                              <TableColumn fx:id="colCor" prefWidth="93.0" text="cor" />
+                              <TableColumn fx:id="colTamanho" prefWidth="64.0" text="Tamanho" />
+                              <TableColumn fx:id="colMaterial" prefWidth="72.0" text="Material" />
+                              <TableColumn fx:id="colSexo" prefWidth="36.0" text="sexo" />
+                              <TableColumn fx:id="colEstoque" minWidth="0.0" prefWidth="63.0" text="Estoque" />
+                              <TableColumn fx:id="colValor" minWidth="0.0" prefWidth="58.0" text="valor" />
+                              <TableColumn fx:id="colCodLoja" prefWidth="52.0" text="Loja" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="113.0" prefWidth="702.0" style="-fx-background-color: #2f2f2f;">
+                     <children>
+                        <Label text="Quantia: " textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtQtdCompra" prefHeight="25.0" prefWidth="61.0" promptText="Quantia" style="-fx-border-color: black;" />
+                        <Button mnemonicParsing="false" onAction="#comprar" text="Comprar">
+                           <effect>
+                              <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="230.0" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="41.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/Compar%20Selecionado.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label text="total: " textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextArea fx:id="txtDados" prefHeight="37.0" prefWidth="199.0" promptText="Dados da compra" />
+                        <Button mnemonicParsing="false" onAction="#limparTela" text="Limpar tela" textAlignment="CENTER" wrapText="true">
+                           <effect>
+                              <Lighting diffuseConstant="1.4" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="230.0" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="83.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/klait/eclipse-workspace/Alg%20II/TrabalhoFinal_TAP/Imagens%20TAP/Limpar%20Tela.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>
